@@ -1,38 +1,149 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+}
+.jumbo {
+  background: url(https://images.pexels.com/photos/1954380/pexels-photo-1954380.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+    no-repeat fixed bottom;
+  background-size: cover;
+  color: #efefef;
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  z-index: -2;
+}
+.overlay {
+  background-color: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.container {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.content {
+  position: absolute;
+  top: 75%;
+  left: 15%;
+  bottom: 0;
+  right: 0;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  padding: 0 30px;
+}
+#wrapper:last-child {
+  height: 100px;
+}
+
+.about {
+  background-color: rgb(236, 236, 236);
+}
+.skills {
+  background-color: rgb(27, 152, 201);
+}
+.contact {
+  background-color: rgb(216, 76, 58);
+}
+
+.footer {
+  background-color: #000;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #57585a;
+  border-radius: 2px;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #1e3a1a;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #131212;
+  opacity: 0.3;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #3f4975;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+.bm-item-list a {
+  text-decoration: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Individual item */
+.bm-item {
+  color: rgb(226, 226, 266);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  list-style: none;
+  padding: 40px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }
